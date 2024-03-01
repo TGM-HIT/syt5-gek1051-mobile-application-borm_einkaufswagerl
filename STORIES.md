@@ -8,10 +8,10 @@
 | 5    | Im Offline-Modus müssen die Daten lokal gespeicher bleiben   |          | MH       |              | TODO   |       |
 | 6    | Bei bestehender Internetverbindung sollen die lokalen Einträge mit anderen Geräten zentral synchronisiert werden können |          | MH       |              | TODO   |       |
 | 7    | Jeder Benutzer soll seinen eigenen Server zur synchronisation angeben können |          | MH       |              | TODO   |       |
-| 8    | Es soll eine einfache, sinnvolle Möglickeit geben die Applikation zum Laufen zu bringen (deployment). |          | M/SH     |              | TODO   |       |
-| 9    | Jeder Benutzer soll sich lokal anmelden können               |          | SH       |              | TODO   |       |
-| 10   | Als Benutzer möchte ich nach einem Einkauf einfach alle Gegenstände aus einer Liste löschen können, damit ich nicht jeden Gegenstand einzeln entfernen muss |          | SH       |              | TODO   |       |
-| 11   | Um eine bessere Erfahrung zu gewährleisten wäre es wichtig, dass jeder Benutzer die Sprache seiner Applikation ändern kann (Deutsch/Englisch) |          | N2H      |              | TODO   |       |
-| 12   | Ein gutes Feature für Benutzerfreundlichkeit ist, dass ein Filter bentutz werden kann um sich zum Beispiel nur gekafute Items ansehen zu können |          | N2H      |              | TODO   |       |
-| 13   | Es wäre nett, wenn Benutzer zu den Items in der Liste Bilder hinzufügen könnten |          | N2H      |              | TODO   |       |
+| 8    | Web-interface hoster has to be able to start an application instance with a single command (deployment) |          | M/SH     |              | TODO   |       |
+| 9    | Users should to be able to log into a certain application instance to view it so that third-parties can't access it |          | SH       |              | TODO   |       |
+| 10   | Users should be able to remove all items of a shopping cart at once to save time (especially with long lists) |          | SH       |              | TODO   |       |
+| 11   | Users should be able to choose an interface language (German/English) to improve user experience |          | N2H      |              | TODO   |       |
+| 12   | Users should be able to filter items by their status and toggle their visibility (bough/not bough) to make sure not to skip certain items (especially with long lists) |          | N2H      |              | TODO   |       |
+| 13   | Users should be able to assign an image to an item in the shopping cart to know the exact look of the product in the shop |          | N2H      |              | TODO   |       |
 
