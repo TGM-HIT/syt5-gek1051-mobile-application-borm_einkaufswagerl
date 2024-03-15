@@ -10,7 +10,7 @@ This table is supposed to visualize all tasks, split up in several user stories.
 
 | ID   | Story                                                        | Assignee | Priority | Story Points | Status | Issue |
 | ---- | ------------------------------------------------------------ | -------- | -------- | ------------ | ------ | ----- |
-| 1    | Users want to be able to create, view, updagit config pull.rebase falsete and delete shopping lists in order to use the application | fgeiblinger | MH       |  | TODO   | [1](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/5#issue-2187785638) |
+| 1    | Users want to be able to create, view, update and delete shopping lists in order to use the application | fgeiblinger | MH       |  | TODO   | [1](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/5#issue-2187785638) |
 | 2    | A user wants to add (also update and delete) items (with quantity) to each shopping cart to keep track of items needed | sproschutinsky | MH       |  | TODO   | [2](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/6#issue-2187786326) |
 | 3    | Users want to flag items as "bought" to ensure a good overview of the list | cpolat | MH       |  | TODO   | [3](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/7#issue-2187787256) |
 | 5    | Users want to safe changes in the offline-mode to ensure consistency when they are online again | fhani | MH       |  | TODO   | [5](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/8#issue-2187789327) |
