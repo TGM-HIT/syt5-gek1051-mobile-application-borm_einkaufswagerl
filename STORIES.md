@@ -1,17 +1,24 @@
 # Stories
 
+This table is supposed to visualize all tasks, split up in several user stories. every user story has: 
+
+* an asignee
+* a priority (must have, should have or nice to have)
+* story points (the amount of time it will approximately need to be fulfilled. One Story point is equal to 50 minutes)
+* a STATUS (TODO,REVIEW,DONE,...)
+* a GitHub Issue linked to the story
+
 | ID   | Story                                                        | Assignee | Priority | Story Points | Status | Issue |
 | ---- | ------------------------------------------------------------ | -------- | -------- | ------------ | ------ | ----- |
-| 1    | Der Benutzer muss Einkaufslisten erstellen, ansehen, bearbeiten und entfernen können |          | MH       |              | TODO   |       |
-| 2    | In jeder Einkaufsliste sollen Waren mit deren Anzahl hinzugefügt, bearbeitet und gelöscht werden können |          | MH       |              | TODO   |       |
-| 3    | In jeder Einkaufsliste sollen Waren als "gekauft" geflagged werden können |          | MH       |              | TODO   |       |
-| 5    | Im Offline-Modus müssen die Daten lokal gespeicher bleiben   |          | MH       |              | TODO   |       |
-| 6    | Bei bestehender Internetverbindung sollen die lokalen Einträge mit anderen Geräten zentral synchronisiert werden können |          | MH       |              | TODO   |       |
-| 7    | Jeder Benutzer soll seinen eigenen Server zur synchronisation angeben können |          | MH       |              | TODO   |       |
-| 8    | Es soll eine einfache, sinnvolle Möglickeit geben die Applikation zum Laufen zu bringen (deployment). |          | M/SH     |              | TODO   |       |
-| 9    | Jeder Benutzer soll sich lokal anmelden können               |          | SH       |              | TODO   |       |
-| 10   | Als Benutzer möchte ich nach einem Einkauf einfach alle Gegenstände aus einer Liste löschen können, damit ich nicht jeden Gegenstand einzeln entfernen muss |          | SH       |              | TODO   |       |
-| 11   | Um eine bessere Erfahrung zu gewährleisten wäre es wichtig, dass jeder Benutzer die Sprache seiner Applikation ändern kann (Deutsch/Englisch) |          | N2H      |              | TODO   |       |
-| 12   | Ein gutes Feature für Benutzerfreundlichkeit ist, dass ein Filter bentutz werden kann um sich zum Beispiel nur gekafute Items ansehen zu können |          | N2H      |              | TODO   |       |
-| 13   | Es wäre nett, wenn Benutzer zu den Items in der Liste Bilder hinzufügen könnten |          | N2H      |              | TODO   |       |
-
+| 1    | Users want to be able to create, view, update and delete shopping lists in order to use the application | fgeiblinger | MH       | 1 | TODO   | [1](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/5#issue-2187785638) |
+| 2    | A user wants to add (also update and delete) items (with quantity) to each shopping cart to keep track of items needed | sproshutinskiy | MH       | 1 | TODO   | [2](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/6#issue-2187786326) |
+| 3    | Users want to flag items as "bought" to ensure a good overview of the list | cpolat | MH       | 1 | TODO   | [3](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/7#issue-2187787256) |
+| 5    | Users want to safe changes in the offline-mode to ensure consistency when they are online again | fhani | MH       | 2 | TODO   | [5](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/8#issue-2187789327) |
+| 6    | While online, changes made by a user have to be commited to ensure a centralised synchronization | fgeiblinger | MH       | 1 | TODO   | [6](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/9#issue-2187790097) |
+| 7    | Every user has to be able to add his server for synchronization | fhani | MH       | 1 | TODO   | [7](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/10#issue-2187790839) |
+| 8    | Web-interface hoster has to be able to start an application instance with a single command (deployment) | sproshutinskiy | SH     | 2 | TODO   | [8](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/11#issue-2187791462) |
+| 9    | Users should to be able to log into a certain application instance to view it so that third-parties can't access it | fgeiblinger | SH       | 2 | TODO   | [9](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/12#issue-2187792039) |
+| 10   | Users should be able to remove all items of a shopping cart at once to save time (especially with long lists) | cpolat | SH       | 2 | TODO   | [10](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/13#issue-2187792369) |
+| 11   | Users should be able to choose an interface language (German/English) to improve user experience | fhani | N2H      |      1        | TODO   | [11](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/14#issue-2187792710) |
+| 12   | Users should be able to filter items by their status and toggle their visibility (bough/not bough) to make sure not to skip certain items (especially with long lists) | sproshutinskiy | N2H      | 1 | TODO   | [12](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/15#issue-2187793348) |
+| 13   | Users should be able to assign an image to an item in the shopping cart to know the exact look of the product in the shop | cpolat | N2H      | 2 | TODO   | [13](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues/16#issue-2187793576) |
