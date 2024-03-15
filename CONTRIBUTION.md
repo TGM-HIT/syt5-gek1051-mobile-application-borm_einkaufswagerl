@@ -17,13 +17,5 @@ Für den Start des Frontends sind folgende Schritte notwendig:
 
 ## Testverfahren
 
-Zum Testen des Projekt verwenden wir Cypres. Cypress kann mit dem Befehl `npm run cypress:open` gestartet werden.
-
-
-
-
-
-
-
-
+Dieses Projekt verwendet den [Karma Test Runner](http://karma-runner.github.io/2.0/index.html). Um den Code auf deinem Rechner zu testen, führe einfach `npm test` aus.
 
