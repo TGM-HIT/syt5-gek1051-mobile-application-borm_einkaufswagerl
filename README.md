@@ -33,7 +33,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl.git
-cd syt5-gek1051-mobile-application-nicht_borm_einkaufswagerl/shopping_list
+cd syt5-gek1051-mobile-application-borm_einkaufswagerl/
 ```
 
 #### 2. Install the Prerequisites
