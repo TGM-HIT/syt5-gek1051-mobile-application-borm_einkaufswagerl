@@ -41,7 +41,7 @@ const sampleListItem = {
 const newestFirst = (a, b) => {
   if (a.createdAt > b.createdAt) return -1;
   if (a.createdAt < b.createdAt) return 1;
-  return 0 
+  return 0
 };
 
 /**
@@ -53,16 +53,16 @@ const newestFirst = (a, b) => {
  * @returns {Promise}
  */
 const ajax = function (url, querystring) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
 
     // construct URL
     var qs = [];
-    for(var i in querystring) { qs.push(i + '=' + encodeURIComponent(querystring[i]))}
+    for (var i in querystring) { qs.push(i + '=' + encodeURIComponent(querystring[i])) }
     url = url + '?' + qs.join('&');
 
     // make HTTP GET request
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function(){
+    xmlhttp.onreadystatechange = function () {
       if (xmlhttp.readyState == 4) {
         if (xmlhttp.status == 200) {
           var obj = JSON.parse(xmlhttp.responseText);
@@ -102,10 +102,10 @@ var app = new Vue({
     shoppingListItems: [],
     singleList: null,
     currentListId: null,
-    newItemTitle:'',
+    newItemTitle: '',
     places: [],
     selectedPlace: null,
-    syncURL:'',
+    syncURL: '',
     syncStatus: 'notsyncing'
   },
   // computed functions return data derived from the core data.
@@ -117,13 +117,13 @@ var app = new Vue({
      * 
      * @returns {Object}
      */
-    counts: function() {
+    counts: function () {
       var obj = {};
       // count #items and how many are checked
-      for(var i in this.shoppingListItems) {
+      for (var i in this.shoppingListItems) {
         var d = this.shoppingListItems[i];
         if (!obj[d.list]) {
-          obj[d.list] = { total: 0, checked: 0};
+          obj[d.list] = { total: 0, checked: 0 };
         }
         obj[d.list].total++;
         if (d.checked) {
@@ -138,7 +138,7 @@ var app = new Vue({
      * 
      * @returns {Array}
      */
-    sortedShoppingLists: function() {
+    sortedShoppingLists: function () {
       return this.shoppingLists.sort(newestFirst);
     },
     /**
@@ -147,18 +147,18 @@ var app = new Vue({
      * 
      * @returns {Array}
      */
-    sortedShoppingListItems: function() {
+    sortedShoppingListItems: function () {
       return this.shoppingListItems.sort(newestFirst);
     }
   },
   /**
    * Called once when the app is first loaded
    */
-  created: function() {
+  created: function () {
 
     // create database index on 'type'
-    db.createIndex({ index: { fields: ['type'] }}).then(() => {
-      
+    db.createIndex({ index: { fields: ['type'] } }).then(() => {
+
       // load all 'list' items 
       var q = {
         selector: {
@@ -188,7 +188,7 @@ var app = new Vue({
       // if we have settings, start syncing
       this.syncURL = data.syncURL;
       this.startSync();
-    }).catch((e) => {})
+    }).catch((e) => { })
 
   },
   methods: {
@@ -196,16 +196,16 @@ var app = new Vue({
      * Called when the settings button is pressed. Sets the mode
      * to 'settings' so the Vue displays the settings panel.
      */
-    onClickSettings: function() {
+    onClickSettings: function () {
       this.mode = 'settings';
     },
     /**
      * Called when the about button is pressed. Sets the mode
      * to 'about' so the Vue displays the about panel.
      */
-    onClickAbout: function() {
+    onClickAbout: function () {
       this.mode = 'about';
-    },    
+    },
     /**
      * Saves 'doc' to PouchDB. It first checks whether that doc
      * exists in the database. If it does, it overwrites it - if
@@ -213,7 +213,7 @@ var app = new Vue({
      * @param {Object} doc
      * @returns {Promise}
      */
-    saveLocalDoc: function(doc) {
+    saveLocalDoc: function (doc) {
       return db.get(doc._id).then((data) => {
         doc._rev = data._rev;
         return db.put(doc);
@@ -225,12 +225,12 @@ var app = new Vue({
      * Called when save button on the settings panel is clicked. The
      * Cloudant sync URL is saved in PouchDB and the sync process starts.
      */
-    onClickStartSync: function() {
+    onClickStartSync: function () {
       var obj = {
         '_id': '_local/user',
         'syncURL': this.syncURL
       };
-      this.saveLocalDoc(obj).then( () => {
+      this.saveLocalDoc(obj).then(() => {
         this.startSync();
       });
     },
@@ -240,7 +240,7 @@ var app = new Vue({
      * from the Cloudant feed. We need to monitor the incoming change
      * so that the Vue.js model is kept in sync.
      */
-    startSync: function() {
+    startSync: function () {
       this.syncStatus = 'notsyncing';
       if (this.sync) {
         this.sync.cancel();
@@ -257,7 +257,7 @@ var app = new Vue({
         if (info.direction == 'pull' && info.change && info.change.docs) {
 
           // loop through all the changes
-          for(var i in info.change.docs) {
+          for (var i in info.change.docs) {
             var change = info.change.docs[i];
             var arr = null;
 
@@ -319,7 +319,7 @@ var app = new Vue({
         key = '_id';
       }
       var doc = null;
-      for(var i in docs) {
+      for (var i in docs) {
         if (docs[i][key] == id) {
           doc = docs[i];
           break;
@@ -345,7 +345,7 @@ var app = new Vue({
 
       // if it exits
       if (doc) {
-        
+
         // modift the updated date
         doc.updatedAt = new Date().toISOString();
 
@@ -367,7 +367,7 @@ var app = new Vue({
      * the mode to 'addlist' to reveal the add shopping list form and
      * resets the form variables.
      */
-    onClickAddShoppingList: function() {
+    onClickAddShoppingList: function () {
 
       // open shopping list form
       this.singleList = JSON.parse(JSON.stringify(sampleShoppingList));
@@ -376,7 +376,7 @@ var app = new Vue({
       this.pagetitle = 'New Shopping List';
       this.places = [];
       this.selectedPlace = null;
-      this.mode='addlist';
+      this.mode = 'addlist';
     },
 
     /**
@@ -384,7 +384,7 @@ var app = new Vue({
      * Writes the new list to PouchDB and adds it to the Vue 
      * model's shoppingLists array
      */
-    onClickSaveShoppingList: function() {
+    onClickSaveShoppingList: function () {
 
       // add timestamps
       this.singleList.updatedAt = new Date().toISOString();
@@ -393,7 +393,7 @@ var app = new Vue({
       if (typeof this.singleList._rev === 'undefined') {
         this.shoppingLists.unshift(this.singleList);
       }
-      
+
       // write to database
       db.put(this.singleList).then((data) => {
         // keep the revision tokens
@@ -408,9 +408,9 @@ var app = new Vue({
      * Called when the Back button is pressed. Returns to the
      * home screen with a lit of shopping lists.
      */
-    onBack: function() {
-      this.mode='showlist';
-      this.pagetitle='Shopping Lists';
+    onBack: function () {
+      this.mode = 'showlist';
+      this.pagetitle = 'Shopping Lists';
     },
 
     /**
@@ -420,12 +420,12 @@ var app = new Vue({
      * @param {String} id
      * @param {String} title
      */
-    onClickEdit: function(id, title) {
+    onClickEdit: function (id, title) {
       this.singleList = this.findDoc(this.shoppingLists, id).doc;
       this.pagetitle = 'Edit - ' + title;
       this.places = [];
       this.selectedPlace = null;
-      this.mode='addlist';
+      this.mode = 'addlist';
     },
 
     /**
@@ -434,7 +434,7 @@ var app = new Vue({
      * removed from Vue's shoppingLists array.
      * @param {String} id
      */
-    onClickDelete: function(id) {
+    onClickDelete: function (id) {
       var match = this.findDoc(this.shoppingLists, id);
       db.remove(match.doc).then(() => {
         this.shoppingLists.splice(match.i, 1);
@@ -450,7 +450,7 @@ var app = new Vue({
      * @param {String} id
      * @param {String} title
      */
-    onClickList: function(id, title) {
+    onClickList: function (id, title) {
       this.currentListId = id;
       this.pagetitle = title;
       this.mode = 'itemedit';
@@ -461,7 +461,7 @@ var app = new Vue({
      * object is created with a unique id. It is written to PouchDB and added
      * to Vue's shoppingListItems array
      */
-    onAddListItem: function() {
+    onAddListItem: function () {
       if (!this.newItemTitle) return;
       var obj = JSON.parse(JSON.stringify(sampleListItem));
       obj._id = 'item:' + cuid();
@@ -469,7 +469,7 @@ var app = new Vue({
       obj.list = this.currentListId;
       obj.createdAt = new Date().toISOString();
       obj.updatedAt = new Date().toISOString();
-      db.put(obj).then( (data) => {
+      db.put(obj).then((data) => {
         obj._rev = data.rev;
         this.shoppingListItems.unshift(obj);
         this.newItemTitle = '';
@@ -481,7 +481,7 @@ var app = new Vue({
      * The item is located and written to PouchDB
      * @param {String} id
      */
-    onCheckListItem: function(id) {
+    onCheckListItem: function (id) {
       this.findUpdateDoc(this.shoppingListItems, id);
     },
 
@@ -491,13 +491,13 @@ var app = new Vue({
      * the API returns something, the options are added to Vue's "places"
      * array and become a pull-down list of options on the front end.
      */
-    onClickLookup: function() {
+    onClickLookup: function () {
 
       // make request to the OpenStreetMap API
       var url = 'https://nominatim.openstreetmap.org/search';
       var qs = {
         format: 'json',
-        addressdetails: 1, 
+        addressdetails: 1,
         namedetails: 1,
         q: this.singleList.place.title
       };
@@ -507,7 +507,7 @@ var app = new Vue({
         this.places = d;
 
         // if there is only one item in the list
-        if (d.length ==1) {
+        if (d.length == 1) {
           // simulate selection of first and only item
           this.onChangePlace(d[0].place_id);
         }
@@ -523,13 +523,13 @@ var app = new Vue({
      * address are moved to the Vue object linked with the front-end form.
      * @param {String} v
      */
-    onChangePlace: function(v) {
+    onChangePlace: function (v) {
       var doc = this.findDoc(this.places, v, 'place_id').doc;
       this.singleList.place.lat = doc.lat;
       this.singleList.place.lon = doc.lon;
       this.singleList.place.license = doc.licence;
       this.singleList.place.address = doc.address;
-     },
+    },
 
     /**
      * Called when an item is deleted from a shopping list. We locate the item
@@ -537,11 +537,24 @@ var app = new Vue({
      * Vue array.
      * @param {String} id
      */
-     onDeleteItem: function(id) {
-       var match = this.findDoc(this.shoppingListItems, id);
-       db.remove(match.doc).then((data) => {
-         this.shoppingListItems.splice(match.i, 1);
-       });
-     }
+    onDeleteItem: function (id) {
+      var match = this.findDoc(this.shoppingListItems, id);
+      db.remove(match.doc).then((data) => {
+        this.shoppingListItems.splice(match.i, 1);
+      });
+    },
+
+    /**
+     * Clears all items from a specific shopping list.
+     * @param {String} listId The ID of the shopping list to clear items from.
+     */
+    onClearList: function(listId) {
+      // Get all items in the list
+      var items = this.shoppingListItems.filter(item => item.list === listId);
+      // Remove all items from the list
+      items.forEach(item => {
+        db.remove(item);
+      });
+    }
   }
 })

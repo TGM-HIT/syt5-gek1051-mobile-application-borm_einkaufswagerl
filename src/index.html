@@ -158,7 +158,13 @@
             v-bind:disabled="newItemTitle.length == 0">
             <md-icon class="md-primary">add_shopping_cart</md-icon>
           </md-button>
+          <md-button class="md-icon-button md-list-action" v-on:click="onClearList(item.list)" id="clearList">
+            <md-icon class="md-primary">remove_shopping_cart</md-icon>
+          </md-button>
+          
         </md-list-item>
+
+
 
         <!-- shopping list items -->
         <md-list-item v-for="item in sortedShoppingListItems" :key="item._id" v-if="item.list == currentListId">
