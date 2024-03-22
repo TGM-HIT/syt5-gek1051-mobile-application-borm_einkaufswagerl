@@ -17,5 +17,5 @@ Für den Start des Frontends sind folgende Schritte notwendig:
 
 ## Testverfahren
 
-Dieses Projekt verwendet [Cypress Testing Framework](https://www.cypress.io/). Die Tests können lokal mit `npm test` ausgeführt werden.
+Dieses Projekt verwendet [Cypress Testing Framework](https://www.cypress.io/). Die Tests können lokal mit `npm test` ausgeführt werden. Weitere tests konnen in der Cypress-UI mit `npm run cy:open` hinzugefügt werden
 
