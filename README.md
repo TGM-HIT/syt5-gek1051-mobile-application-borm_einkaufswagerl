@@ -1,5 +1,5 @@
 # Shopping cart with cloud sync
-
+Overleaf Link: https://www.overleaf.com/read/jswvbjdxjkjx#5e6040
 ## Overview
 
 This project builds upon the IBM Watson Data Lab's [Shopping List Vue.js PouchDB](https://github.com/ibm-watson-data-lab/shopping-list-vuejs-pouchdb) application, enhancing it with new features and improvements for a more robust and user-friendly shopping list application. By utilizing Vue.js for the frontend and PouchDB for offline functionality and data synchronization, our extension introduces enhanced synchronization capabilities, an improved user interface, and additional customization options for shopping categories.
