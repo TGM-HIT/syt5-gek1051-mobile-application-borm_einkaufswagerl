@@ -1,5 +1,34 @@
 {
+  "name": "shopping-list-vuejs-pouchdb",
+  "version": "1.0.0",
+  "description": "Offline first shopping list app built with Vue.js and PouchDB",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "cypress run",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl.git"
+  },
+  "keywords": [
+    "Offline",
+    "First",
+    "PouchDB",
+    "Vue.js"
+  ],
+  "author": "Glynn Bird <glynn.bird@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl/issues"
+  },
+  "homepage": "https://github.com/TGM-HIT/syt5-gek1051-mobile-application-borm_einkaufswagerl#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "metrics-tracker-client": "^0.2.3"
+  },
   "devDependencies": {
-    "cypress": "^13.7.0"
+    "cypress": "^13.7.0",
+    "mocha": "^5.0.0"
   }
 }
