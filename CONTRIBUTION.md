@@ -3,7 +3,7 @@
 ## Entwicklungsprozess
 
 ### Frontend-Entwicklung
-Das Frontend basiert auf einem Vue-Projekt, welches sich im `frontend`-Verzeichnis befindet.
+Das Frontend basiert auf einem Vue-Projekt, welches sich im `src`-Verzeichnis befindet.
 
 Für den Start des Frontends sind folgende Schritte notwendig:
 
@@ -17,5 +17,5 @@ Für den Start des Frontends sind folgende Schritte notwendig:
 
 ## Testverfahren
 
-Dieses Projekt verwendet den [Karma Test Runner](http://karma-runner.github.io/2.0/index.html). Um den Code auf deinem Rechner zu testen, führe einfach `npm test` aus.
+Dieses Projekt verwendet [Cypress Testing Framework](https://www.cypress.io/). Die Tests können lokal mit `npm test` ausgeführt werden.
 

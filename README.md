@@ -41,7 +41,7 @@ cd syt5-gek1051-mobile-application-borm_einkaufswagerl/
 Install prerequisites (assuming [Node.js](https://nodejs.org/) is preinstalled):
 
 ```bash	
-cd syt5-gek1051-mobile-application-borm_einkaufswagerl/src
+cd syt5-gek1051-mobile-application-borm_einkaufswagerl/
 ```
 
 ```bash
@@ -58,8 +58,8 @@ npm start
 
 ## User Stories
 
-User stories for the project can be found in the [STORIES.md](Stories.md) file.
+User stories for the project can be found in the [STORIES.md](STORIES.md) file.
 
 ## Contribution
 
-Contributing to the project can be found in the [CONTRIBUTION.md](Contribution.md) file.
+Contributing to the project can be found in the [CONTRIBUTION.md](CONTRIBUTION.md) file.
