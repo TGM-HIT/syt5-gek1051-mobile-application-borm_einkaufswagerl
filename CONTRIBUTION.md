@@ -30,3 +30,7 @@ http://<BENUTZERNAME>:<PASSWORT>@127.0.0.1:5984/shopping_cart
 
 ### Testverfahren
 Dieses Projekt verwendet [Cypress Testing Framework](https://www.cypress.io/). Die Tests können lokal mit `npm test` ausgeführt werden. Weitere tests konnen in der Cypress-UI mit `npm run cy:open` hinzugefügt werden. Die E2E Tests befinden sich dann im `cypress/e2e` Verzeichnis.
+
+### Weiterführende links
+[VueJS Reference](https://vuejs.org/api/)
+[PouchDB Reference](https://pouchdb.com/api.html)
