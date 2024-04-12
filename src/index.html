@@ -57,6 +57,9 @@
         <md-button class="md-icon-button" v-if="mode == 'showlist'" v-on:click="onClickAbout">
           <md-icon>info_outline</md-icon>
         </md-button>
+        <md-chip v-if="syncStatus == 'notsyncing'">Not Syncing</md-chip>
+        <md-chip v-if="syncStatus == 'syncing'" class="md-secondary">Syncing</md-chip>
+        <md-chip v-if="syncStatus == 'syncerror'" class="md-warn">Sync Error</md-chip>
 
       </md-toolbar>
     </md-whiteframe> <!-- top bar -->
